@@ -44,8 +44,8 @@ const SignUp = () => {
   };
   return (
     <div className="w-full h-screen flex justify-center items-center bg-amber-50">
-      <div className="w-[65%] h-[75%] mx-auto flex rounded-2xl overflow-hidden shadow-sm shadow-black/40">
-        <div className="w-[50%] h-full flex flex-col gap-5 justify-center items-center bg-white px-10 py-10">
+      <div className="w-[90%] md:w-[65%] h-[90%] md:h-[75%] mx-auto flex md:rounded-2xl overflow-hidden shadow-sm shadow-black/40">
+        <div className="w-full md:w-[50%] h-full flex flex-col gap-5 justify-center items-center bg-white px-10 py-10">
           <h2 className="text-2xl font-semibold">
             Sign Up to{" "}
             <span className="font-semibold text-orange-500">InstaVibe</span>
@@ -171,7 +171,7 @@ const SignUp = () => {
             </Link>
           </p>
         </div>
-        <div className="w-[50%] h-full drop-shadow-lg drop-shadow-black  text-white relative bg-black">
+        <div className="w-[50%] h-full hidden md:block drop-shadow-lg drop-shadow-black  text-white relative bg-black">
           <img src={logo} alt="" />
           <p className="absolute top-[58%] left-[8%] text-shadow-sm text-shadow-blue-400 text-lg font-semibold">
             Welcome to InstaVibe. Where Stories Come to Life.
