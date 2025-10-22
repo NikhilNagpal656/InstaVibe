@@ -43,10 +43,7 @@ export const signUp = async (req, res) => {
       sameSite: "None",
     });
 
-    return res.status(200).json({
-      message: "User Created",
-      user
-    });
+    return res.status(200).json({ user});
   } catch (error) {
     return res.status(400).json({
       message: "signUp error",
@@ -89,10 +86,7 @@ export const signIn = async (req, res) => {
       sameSite: "None",
     });
 
-    return res.status(200).json({
-      message: "User signIn",
-      user : alreadyUser
-    });
+    return res.status(200).json({ user : alreadyUser});
   } catch (error) {
     return res.status(400).json({
       message: "signIn error",
