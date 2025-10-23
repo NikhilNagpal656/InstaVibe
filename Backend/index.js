@@ -15,7 +15,7 @@ import { app, server } from "./socket.js";
 
 let port = process.env.PORT || 4000;
 app.use(cors({
-    origin : "http://localhost:5173",
+    origin : "https://instavibe-2gra.onrender.com",
     credentials : true
 }));
 app.use(express.json())
