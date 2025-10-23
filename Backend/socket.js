@@ -6,7 +6,7 @@ const server = http.createServer(app)
 
 const io = new Server(server , {
     cors : {
-        origin : "https://instavibe-frontend-91za.onrender.com",
+        origin : "https://instavibe-tr5v.onrender.com",
         methods : ["GET" ,"POST"]
     }
 })
