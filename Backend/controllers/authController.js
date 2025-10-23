@@ -39,11 +39,15 @@ export const signUp = async (req, res) => {
     res.cookie("token", token, {
       HttpOnly: true,
       maxAge: 10 * 12 * 30 * 24 * 60 * 60 * 1000,
-      secure: false,
-      sameSite: "Strict",
+      secure: true,
+      sameSite: "None",
     });
 
+<<<<<<< HEAD
     return res.status(200).json({ user });
+=======
+    return res.status(200).json({ user});
+>>>>>>> 9e2aba473c02422c000c545b331eb873b2407881
   } catch (error) {
     return res.status(400).json({
       message: "signUp error",
@@ -82,8 +86,8 @@ export const signIn = async (req, res) => {
     res.cookie("token", token, {
       HttpOnly: true,
       maxAge: 10 * 12 * 30 * 24 * 60 * 60 * 1000,
-      secure: false,
-      sameSite: "Strict",
+      secure: true,
+      sameSite: "None",
     });
 
     return res.status(200).json({ user : alreadyUser});
