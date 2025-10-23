@@ -34,10 +34,10 @@ const Search = () => {
       </div>
       <div
         
-        className="w-full max-w-[800px] mx-auto h-[70px] bg-gray-800 rounded-full flex items-center justify-center"
+        className="w-full max-w-[800px] mx-auto h-[70px] bg-gray-800 rounded-full flex items-center justify-between gap-5 px-5 mt-8"
       >
         <input
-          className="w-[90%] h-[90%] text-white placeholder:text-white px-5 outline-none border-none"
+          className="w-[80%] md:w-[90%] h-[90%] text-white placeholder:text-white  outline-none border-none"
           type="text"
           placeholder="Search for User"
           onChange={(e) => setinput(e.target.value)}
