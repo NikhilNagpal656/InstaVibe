@@ -26,7 +26,7 @@ import Search from './pages/Search'
 import useAllNotification from './hooks/useAllNotification'
 import Notification from './pages/Notification'
 import { setNotificationData } from './utils/userSlice'
-export const serverUrl = "https://instavibe-backend-nj1l.onrender.com"
+export const serverUrl = "http://localhost:8000"
 
 
 const App = () => {
