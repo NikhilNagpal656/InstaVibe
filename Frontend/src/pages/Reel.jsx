@@ -8,7 +8,7 @@ const Reel = () => {
   const {reelData} = useSelector((state)=> state.reelSlice)
   return (
     <div className='w-full h-screen flex justify-center items-center bg-gray-900 overflow-hidden'>
-      <div className='flex fixed top-[20px] text-white text-2xl gap-4 items-center left-[20px]'>
+      <div className='flex fixed top-[20px] z-100 text-white text-2xl gap-4 items-center left-[20px]'>
         <Link to={"/"}>
           <FaArrowLeftLong />
         </Link>
