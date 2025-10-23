@@ -13,6 +13,7 @@ import { setPostData } from "../utils/postSlice";
 import { setUserData } from "../utils/userSlice";
 import Button from "./Button";
 import { serverUrl } from "../App";
+import { useNavigate } from "react-router-dom";
 const Post = ({ post }) => {
   const  {user}  = useSelector((state) => state.userSlice);
   
@@ -21,6 +22,7 @@ const Post = ({ post }) => {
   const [comment, setComment] = useState("");
   const [isCommentOpen, setIsCommentOpen] = useState(false);
     const { socketData } = useSelector((state) => state.socketSlice);
+    const navigate = useNavigate()
 
   const handleLike = async (id) => {
     try {
@@ -82,8 +84,8 @@ const Post = ({ post }) => {
   return (
     <div className="flex flex-col gap-5 relative w-[95%] mx-auto h-[600px] shadow-sm shadow-black/60 text-black mt-10 rounded-2xl px-4 py-4">
       <div className="flex justify-between w-full items-center">
-        <div className="flex gap-2 items-start">
-          <div className="w-15 h-15 rounded-full">
+        <div onClick={()=> navigate(`/userProfile/${post.author.userName}`)} className="flex gap-2 items-start">
+          <div className="w-12 h-12 md:w-16 md:h-16 rounded-full">
             <img
               className="w-full h-full rounded-full object-center"
               src={post.author.profilePic}
@@ -93,7 +95,7 @@ const Post = ({ post }) => {
           <p>{post.author.userName}</p>
         </div>
         {post.author._id != user._id && (
-            <Button tailWind={"font-medium cursor-pointer bg-blue-600 text-white px-5 py-2 rounded-2xl"} id ={post.author._id}/>
+            <Button tailWind={"font-medium cursor-pointer bg-blue-600 text-white px-3 md:px-5 py-2 rounded-2xl"} id ={post.author._id}/>
         )}
       </div>
 
@@ -142,11 +144,11 @@ const Post = ({ post }) => {
           isCommentOpen ? "traslate-x-[410px]" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center font-semibold">
+        <div className="flex items-center justify-center px-5 font-semibold">
           <RxCross2 onClick={() => setIsCommentOpen(false)} />
           <p className="w-full text-center">Comments</p>
         </div>
-        <div className="mt-10 flex flex-col gap-10 ">
+        <div className="mt-10 flex flex-col px-5 gap-10 ">
           {post.comments.map((comment) => (
             <div className="flex gap-2 border-b border-b-gray-300 pb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden">
@@ -173,13 +175,13 @@ const Post = ({ post }) => {
         <div className="flex gap-2 items-center w-[90%]">
           <div className="w-10 h-10 rounded-full overflow-hidden">
             <img
-              className="w-full h-full  object-center"
+              className="w-full h-full object-center"
               src={user.profilePic}
               alt=""
             />
           </div>
           <input
-            className="outline-none border-b-2 border-black/50 pb-1 pt-2 w-full"
+            className="outline-none border-b-2 border-black/50 pb-1 pt-2 w-[80%] lg:w-full"
             type="text"
             placeholder="Enter comment"
             value={comment}

@@ -33,7 +33,7 @@ const LeftHome = () => {
   }
 
   return (
-    <div className="lg:w-[25%] lg:block hidden overflow-auto pb-5 h-screen border-r border-gray-300 bg-black text-white px-4 py-2">
+    <div className="xl:w-[25%] xl:block hidden overflow-auto pb-5 h-screen border-r border-gray-300 bg-black text-white px-4 py-2">
       <div className="flex justify-between w-full items-center">
         <img className="w-30" src={logo} alt="" />
         <div className="relative">
@@ -51,12 +51,12 @@ const LeftHome = () => {
          <div className="flex items-center gap-2">
             <img
               className="rounded-full w-15 h-15"
-              src={ user?.profilePic || `https://api.dicebear.com/9.x/initials/svg?seed=${user.name}`}
+              src={ user?.profilePic || `https://api.dicebear.com/9.x/initials/svg?seed=${user?.name}`}
               alt="avatar"
             />
             <div>
-              <p>{user.name}</p>
-              <p>{user.userName}</p>
+              <p>{user?.name}</p>
+              <p>{user?.userName}</p>
             </div>
           </div>
           </Link>

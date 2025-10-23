@@ -3,7 +3,7 @@ import Message from './Message'
 
 const RightHome = () => {
   return (
-    <div className='lg:w-[25%] hidden lg:block min-h-screen  bg-black'>
+    <div className='xl:w-[25%] hidden xl:block min-h-screen  bg-black'>
       <Message/>
     </div>
   )
