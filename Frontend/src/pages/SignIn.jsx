@@ -32,11 +32,7 @@ const SignIn = () => {
         authData,
         { withCredentials: true }
       );
-<<<<<<< HEAD
       dispatch(setUserData(res.data.user))
-=======
-      dispatch(setUserData(res.data?.user))
->>>>>>> 9e2aba473c02422c000c545b331eb873b2407881
       setLoading(false);
       navigate("/");
     } catch (error) {
@@ -46,11 +42,7 @@ const SignIn = () => {
   };
   return (
     <div className="w-full h-screen flex justify-center items-center bg-amber-50">
-<<<<<<< HEAD
       <div className="w-full md:w-[95%] xl:w-[65%] h-full md:h-[75%] mx-auto flex lg:rounded-2xl overflow-hidden shadow-sm shadow-black/40">
-=======
-      <div className="w-[90%] md:w-[65%] h-[90%] md:h-[75%] mx-auto flex md:rounded-2xl overflow-hidden shadow-sm shadow-black/40">
->>>>>>> 9e2aba473c02422c000c545b331eb873b2407881
         <div className="w-full md:w-[50%] h-full flex flex-col gap-7 justify-center items-center bg-white px-10 py-10">
           <h2 className="text-2xl font-semibold">
             Sign In to{" "}
@@ -131,11 +123,7 @@ const SignIn = () => {
             </Link>
           </p>
         </div>
-<<<<<<< HEAD
         <div className="w-[50%] hidden md:flex justify-center items-center drop-shadow-lg drop-shadow-black h-full text-white relative bg-black">
-=======
-        <div className="w-[50%] hidden md:block drop-shadow-lg drop-shadow-black h-full text-white relative bg-black">
->>>>>>> 9e2aba473c02422c000c545b331eb873b2407881
           <img src={logo} alt="" />
           <p className="absolute top-[58%] left-[8%] text-sm lg:text-lg text-shadow-sm text-shadow-blue-400 font-semibold">
             Welcome to InstaVibe. Where Stories Come to Life.
