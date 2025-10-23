@@ -42,12 +42,7 @@ export const signUp = async (req, res) => {
       secure: true,
       sameSite: "None",
     });
-
-<<<<<<< HEAD
-    return res.status(200).json({ user });
-=======
     return res.status(200).json({ user});
->>>>>>> 9e2aba473c02422c000c545b331eb873b2407881
   } catch (error) {
     return res.status(400).json({
       message: "signUp error",
